@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 11</h1>
+    <p>
+
+    </p>
+    <script>
+        const userNumberFirst = parseInt(prompt(`Введіть перше число`))
+        const userNumberSecond = parseInt(prompt(`Введіть друге число`))
+        let oddSumFive = 0;
+        let countForFive = 0;
+        for (let i = userNumberFirst; i <= userNumberSecond; i++) {
+        if (i % 2 !== 0) { 
+            oddSumFive += i;
+            countForFive++;
+        } else if (countForFive === 5) {
+            break;
+        }
+        }
+        document.write(`Сума пяти непарних чисел= ${oddSumFive}`)       
+            
+            
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Задача 13</h1>
+    <p>
+      Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі
+      розміром N*M. Маючи К снарядів користувач<br />
+      намагається потопити корабель.
+    </p>
+    <script>
+      let N = parseInt(prompt(`Введіть розмір N`)); //5 границя матриці
+      let M = parseInt(prompt(`Введіть розмір M`)); //3
+      let K = parseInt(prompt(`Введіть кількість снарядів`));
+
+      let positionShipN = 1 + Math.floor(Math.random * N);
+      let positionShipM = 1 + Math.floor(Math.random * M);
+      //2 Shots
+      do {
+        let shotParametrN = parseInt(prompt(`Введіть координати пострілу N`));
+        let shotParametrM = parseInt(prompt(`Введіть координати пострілу M`));
+        if (
+          shotParametrN === positionShipN &&
+          shotParametrM === positionShipM
+        ) {
+          alert("Win");
+          break;
+        } else {
+          K--;
+          alert(`Промах , залишок снарядів ${K}`);
+        }
+      } while (K > 0);
+      document.write(`<br>${shotParametr}`);
+    </script>
+  </body>
+</html>
